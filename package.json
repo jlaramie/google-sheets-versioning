@@ -1,0 +1,30 @@
+{
+  "name": "google-sheets-versioning",
+  "version": "1.0.0",
+  "description": "Extracts each worksheet from a google sheet and all the formulas for versioning",
+  "main": "index.js",
+  "repository": "git@github.com:jlaramie/google-sheets-versioning.git",
+  "author": "Jordan Laramie <jordanlaramie@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest",
+    "test-debug": "node --inspect-brk ./node_modules/jest/bin/jest.js",
+    "lint": "run-s lint:*",
+    "lint:prettier": "prettier --config ./.prettierrc --write \"**/*.{js,json}\"",
+    "lint:eslint": "eslint ."
+  },
+  "dependencies": {
+    "command-line-args": "^5.2.0",
+    "dotenv": "^8.2.0",
+    "google-spreadsheet": "^3.1.15"
+  },
+  "devDependencies": {
+    "eslint": "^7.21.0",
+    "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-jest": "^24.2.1",
+    "eslint-plugin-prettier": "^3.3.1",
+    "jest": "^26.6.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.1.2"
+  }
+}

@@ -1,0 +1,48 @@
+// https://developers.google.com/sheets/api/samples/conditional-formatting
+// GET https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId?fields=sheets(properties(title,sheetId),conditionalFormats)
+{
+  "sheets": [
+    {
+      "properties": {
+        "sheetId": 0,
+        "title": "Sheet1"
+      },
+      "conditionalFormats": [
+        {
+          "ranges": [
+            {
+              "startRowIndex": 0,
+              "endRowIndex": 1000,
+              "startColumnIndex": 1,
+              "endColumnIndex": 2
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "NUMBER_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "TRUE"
+                }
+              ]
+            },
+            "format": {
+              "backgroundColor": {
+                "red": 0.7176471,
+                "green": 0.88235295,
+                "blue": 0.8039216
+              },
+              "backgroundColorStyle": {
+                "rgbColor": {
+                  "red": 0.7176471,
+                  "green": 0.88235295,
+                  "blue": 0.8039216
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

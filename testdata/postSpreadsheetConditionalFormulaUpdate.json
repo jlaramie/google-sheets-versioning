@@ -1,0 +1,44 @@
+// https://developers.google.com/sheets/api/samples/conditional-formatting
+// POST https://sheets.googleapis.com/v4/spreadsheets/spreadsheetId:batchUpdate
+{
+  "requests": [
+    {
+      // Move the index
+      "updateConditionalFormatRule": {
+        "sheetId": "SHEET_ID",
+        "index": 0,
+        "newIndex": 2
+      },
+      "updateConditionalFormatRule": {
+        "sheetId": "SHEET_ID",
+        "index": 0,
+        "rule": {
+          "ranges": [
+            {
+              "sheetId": "SHEET_ID",
+              "startRowIndex": 0,
+              "endRowIndex": 5,
+              "startColumnIndex": 0,
+              "endColumnIndex": 4
+            }
+          ],
+          "booleanRule": {
+            "condition": {
+              "type": "TEXT_EQ",
+              "values": [
+                {
+                  "userEnteredValue": "Total Cost"
+                }
+              ]
+            },
+            "format": {
+              "textFormat": {
+                "bold": true
+              }
+            }
+          }
+        }
+      }
+    }
+  ]
+}
