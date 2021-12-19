@@ -42,7 +42,9 @@ function getWorksheetId(sheet, idOrNameOrIndex) {
 async function getWorksheetFormulas(worksheet, options = {}) {
   const formulas = {};
   await worksheet.loadCells(
-    `A1:${worksheet.lastColumnLetter}${worksheet.rowCount}`
+    options.all
+      ? `A1:${worksheet.lastColumnLetter}${worksheet.rowCount}`
+      : `A${worksheet._headerRowIndex}:${worksheet.lastColumnLetter}${worksheet._headerRowIndex}`
   );
 
   worksheet._cells.forEach(row => {
