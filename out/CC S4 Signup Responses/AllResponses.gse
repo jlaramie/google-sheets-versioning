@@ -1,0 +1,19 @@
+// Approved
+=ARRAYFORMULA(IF(ROW($A:$A)=1,"Approved", IF($D:$D="","", 
+  IFERROR(VLOOKUP(
+    AllResponses!$D:$D&AllResponses!$M:$M&","&TEXT(AllResponses!$G:$G, "mm/dd/yyyy hh:mm:ss:000"), 
+    { ChangesLookup!$B$2:$B&ChangesLookup!$F$2:$F, IF(ChangesLookup!$G$2:$G="APPROVED",TRUE,ChangesLookup!$G$2:$G) }
+  , {2}, FALSE))
+)))
+
+// IS DUP
+//  ID&Discord&Role&Peak  ID&ChangeDate
+=ARRAYFORMULA(IF(ROW($A:$A)=1,"IS DUP", IF($D:$D="","", 
+  IF(COUNTIFS($D:$D&$M:$M&$N:$N, $D:$D&$M:$M&$N:$N) > 1,
+    IF(IF($A:$A<>TRUE,1) * COUNTIFS($D:$D&$M:$M&$N:$N, $D1:$D&$M:$M&$N1:$N, $A:$A, TRUE) > 0, TRUE, FALSE),
+    IF(IF($M:$M="",1) * COUNTIFS($D:$D&$N:$N, $D:$D&$N:$N) > 1,
+      IF(IF($A:$A<>TRUE,1) * COUNTIFS($D:$D&$N:$N, $D1:$D&$N1:$N, $A:$A, TRUE) > 0, TRUE, FALSE),
+      FALSE
+    )
+  )
+)))

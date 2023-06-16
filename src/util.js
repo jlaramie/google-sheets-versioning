@@ -1,7 +1,5 @@
-const {
-  GoogleSpreadsheet,
-  GoogleSpreadsheetRow
-} = require('google-spreadsheet');
+const { GoogleSpreadsheet } = require('google-spreadsheet');
+const excelFormula = require('excel-formula');
 
 async function getSheet(options) {
   const sheet = new GoogleSpreadsheet(options.sheet);
@@ -51,9 +49,15 @@ async function getWorksheetFormulas(worksheet, options = {}) {
     row.forEach(cell => {
       if (cell.formula) {
         formulas[cell.a1Address] = {
-          formula: cell.formula,
+          formula: excelFormula.formatFormula(cell.formula, {
+            tmplIndentTab: ' ',
+            tmplSubexpressionStart: '{{autoindent}}(',
+            tmplSubexpressionEnd: ')',
+            tmplArgument: '{{token}}'
+          }),
           note: cell.note
         };
+        debugger;
       }
     });
   });

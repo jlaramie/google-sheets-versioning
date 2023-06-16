@@ -1,0 +1,97 @@
+[
+  {
+    "value": "ARRAY",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "ARRAYROW",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "ARRAY",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "ARRAYROW",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "1.1",
+    "type": "operand",
+    "subtype": "number"
+  },
+  {
+    "value": ",",
+    "type": "argument",
+    "subtype": ""
+  },
+  {
+    "value": "1.2",
+    "type": "operand",
+    "subtype": "number"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  },
+  {
+    "value": ",",
+    "type": "argument",
+    "subtype": ""
+  },
+  {
+    "value": "ARRAY",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "ARRAYROW",
+    "type": "function",
+    "subtype": "start"
+  },
+  {
+    "value": "1.3",
+    "type": "operand",
+    "subtype": "number"
+  },
+  {
+    "value": ",",
+    "type": "argument",
+    "subtype": ""
+  },
+  {
+    "value": "1.4",
+    "type": "operand",
+    "subtype": "number"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  },
+  {
+    "value": "",
+    "type": "function",
+    "subtype": "stop"
+  }
+]

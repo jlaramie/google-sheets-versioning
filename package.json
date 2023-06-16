@@ -16,6 +16,8 @@
   "dependencies": {
     "command-line-args": "^5.2.0",
     "dotenv": "^8.2.0",
+    "excel-formula": "^1.5.0",
+    "excel-formula-parser": "^1.0.3",
     "google-spreadsheet": "^3.1.15"
   },
   "devDependencies": {
